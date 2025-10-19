@@ -1,8 +1,6 @@
 # HNG13-FE-stage0-profile-card
-Chic responsive Profile Card (Stage 0) — accessible, testable, pink-themed profile component built with plain HTML, CSS and vanilla JS for **HNG Internship Stage 0 task**.
 
-**Description**  
-A responsive, accessible, and testable Profile Card built with **plain HTML, CSS, and vanilla JavaScript**. This project satisfies the Stage 0 requirements and is tailored for Pemily Vianne with a pink, modern, minimalistic design and light/dark theme support.
+A responsive, accessible, and testable Profile Card built with **plain HTML, CSS, and vanilla JavaScript**. This project satisfies the **HNG Internship Stage 0 task** requirements and is tailored for Pemily Vianne with a pink, modern, minimalistic design and light/dark theme support.
 
 ## Features
 - All required `data-testid` attributes are included for automated testing:
@@ -54,5 +52,7 @@ Want to suggest improvements or pinkify it even more? Open an issue or PR — I�
 
 ---
 ✍️ Author
+
 Providence Oduok
+
 Frontend Developer | Future Full-Stack Engineer 👩‍💻
