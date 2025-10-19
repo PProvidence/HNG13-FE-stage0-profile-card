@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A chic, modern, pink-themed animated avatar showcase built with vanilla CSS & JS — minimalistic, professional, and full of personality Profile card for Pemily Vianne, a Frontend Web Specialist.">
+    <title>Pemily Vianne — Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="page">
+        <article data-testid="test-profile-card" class="card" aria-labelledby="name">
+            <div class="card-left">
+                <figure class="avatar-figure">
+                    <img data-testid="test-user-avatar" id="avatarImage" class="avatar" src="./images/Providence Oduok - Frontend Web Specialist.jpg" alt="Profile picture of Pemily Vianne" loading="lazy" />
+                    <figcaption class="visually-hidden">Avatar for Pemily Vianne</figcaption>
+                </figure>
+
+                <div class="avatar-controls">
+                    <label for="avatarUrl" class="sr-label">Avatar image URL</label>
+                    <input id="avatarUrl" class="input input-url" type="url"
+                        placeholder="Paste image URL and press Enter" aria-label="Avatar URL" data-testid="test-avatar-url" />
+                    <label for="avatarUpload" class="sr-label">Upload avatar</label>
+                    <input id="avatarUpload" class="input input-file" type="file" accept="image/*"
+                        aria-label="Upload avatar image" data-testid="test-avatar-upload"/>
+                </div>
+            </div>
+
+            <div class="card-right">
+                <header class="card-header">
+                    <h2 id="name" data-testid="test-user-name" class="name">Pemily Vianne</h2>
+
+                    <div class="meta-row">
+                        <div class="time">
+                            <small class="label">Current Time (ms)</small>
+                            <div data-testid="test-user-time" id="timeMillis" class="time-millis" aria-live="polite">
+                            </div>
+                        </div>
+
+                        <div class="theme-toggle">
+                            <label class="toggle" for="themeSwitch" title="Toggle light / dark">
+                                <input id="themeSwitch" type="checkbox" aria-label="Toggle theme" />
+                                <span class="track"><span class="dot" aria-hidden="true"></span></span>
+                            </label>
+                        </div>
+                    </div>
+                </header>
+
+                <section class="bio-section">
+                    <p data-testid="test-user-bio" class="bio">
+                        I’m a highly motivated, detail-oriented, and dedicated Frontend Developer with a solid computer
+                        science background and a passion for building innovative, user-friendly web applications. I
+                        bring proven expertise in HTML, CSS, JavaScript, TypeScript, and React, and have a track record
+                        of developing high-performance, accessible interfaces that align with both user and business
+                        goals.
+                        <br><br>
+                        I thrive in collaborative environments and enjoy translating stakeholder needs into practical,
+                        scalable solutions. I work at a fast pace to meet tight deadlines and always give 150%—whether
+                        I’m being paid or not—because I genuinely enjoy seeing the things I build come to life.
+                        <br><br>
+                        I’m currently focused on expanding into full-stack development and contributing to impactful
+                        projects that leverage cutting-edge technologies. I’m also passionate about open-source and
+                        always eager to learn, grow, and make a meaningful impact as part of a forward-thinking team.
+                    </p>
+                </section>
+
+                <nav aria-label="Social links" class="social-nav">
+                    <ul data-testid="test-user-social-links" class="social-list">
+                        <li>
+                            <a data-testid="test-user-social-twitter" class="social-link" href="https://x.com/Pemily_Vianne" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+                        </li>
+                        <li>
+                            <a data-testid="test-user-social-linkedin" class="social-link" href="https://www.linkedin.com/in/providence-oduok/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a data-testid="test-user-social-github" class="social-link" href="https://github.com/PProvidence" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="lists">
+                    <div class="list-block">
+                        <h3 class="list-title">Hobbies</h3>
+                        <ul data-testid="test-user-hobbies" class="item-list likes-list">
+                            <li> Coding </li>
+                            <li> Reading </li>
+                            <li> Music </li>
+                            <li> Swimming </li>
+                        </ul>
+                    </div>
+
+                    <div class="list-block">
+                        <h3 class="list-title">Dislikes</h3>
+                        <ul data-testid="test-user-dislikes" class="item-list dislikes-list">
+                            <li>Procrastination</li>
+                            <li>Bugs in production</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </article>
+
+        <footer class="attribution">
+            <small>Profile card — built for Stage 0 task • Pemily Vianne</small>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
