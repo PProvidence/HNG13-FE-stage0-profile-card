@@ -21,13 +21,13 @@
                     <figcaption class="visually-hidden">Avatar for Pemily Vianne</figcaption>
                 </figure>
 
-                <div class="avatar-controls">
+                <div class="avatar-controls" data-testid="test-avatar-controls">
                     <label for="avatarUrl" class="sr-label">Avatar image URL</label>
                     <input id="avatarUrl" class="input input-url" type="url"
-                        placeholder="Paste image URL and press Enter" aria-label="Avatar URL" data-testid="test-avatar-url" />
+                        placeholder="Paste image URL and press Enter" aria-label="Avatar URL" data-testid="test-avatar-url-input" />
                     <label for="avatarUpload" class="sr-label">Upload avatar</label>
                     <input id="avatarUpload" class="input input-file" type="file" accept="image/*"
-                        aria-label="Upload avatar image" data-testid="test-avatar-upload"/>
+                        aria-label="Upload avatar image" data-testid="test-avatar-upload-file-input"/>
                 </div>
             </div>
 
@@ -35,23 +35,23 @@
                 <header class="card-header">
                     <h2 id="name" data-testid="test-user-name" class="name">Pemily Vianne</h2>
 
-                    <div class="meta-row">
-                        <div class="time">
-                            <small class="label">Current Time (ms)</small>
+                    <div class="meta-row" data-testid="test-meta-row">
+                        <div class="time" data-testid="test-time-container">
+                            <small class="label" data-testid="test-time-label">Current Time (ms)</small>
                             <div data-testid="test-user-time" id="timeMillis" class="time-millis" aria-live="polite">
                             </div>
                         </div>
 
-                        <div class="theme-toggle">
+                        <div class="theme-toggle" data-testid="test-theme-toggle-container">
                             <label class="toggle" for="themeSwitch" title="Toggle light / dark">
-                                <input id="themeSwitch" type="checkbox" aria-label="Toggle theme" />
+                                <input id="themeSwitch" type="checkbox" aria-label="Toggle theme" data-testid="test-theme-switch"/>
                                 <span class="track"><span class="dot" aria-hidden="true"></span></span>
                             </label>
                         </div>
                     </div>
                 </header>
 
-                <section class="bio-section">
+                <section class="bio-section" data-testid="test-bio-section">
                     <p data-testid="test-user-bio" class="bio">
                         I’m a highly motivated, detail-oriented, and dedicated Frontend Developer with a solid computer
                         science background and a passion for building innovative, user-friendly web applications. I
@@ -69,7 +69,7 @@
                     </p>
                 </section>
 
-                <nav aria-label="Social links" class="social-nav">
+                <nav aria-label="Social links" class="social-nav" data-testid="test-social-nav">
                     <ul data-testid="test-user-social-links" class="social-list">
                         <li>
                             <a data-testid="test-user-social-twitter" class="social-link" href="https://x.com/Pemily_Vianne" target="_blank" rel="noopener noreferrer">X / Twitter</a>
@@ -83,9 +83,9 @@
                     </ul>
                 </nav>
 
-                <section class="lists">
-                    <div class="list-block">
-                        <h3 class="list-title">Hobbies</h3>
+                <section class="lists" data-testid="test-lists-section">
+                    <div class="list-block" data-testid="test-hobbies-block">
+                        <h3 class="list-title" data-testid="test-hobbies-title">Hobbies</h3>
                         <ul data-testid="test-user-hobbies" class="item-list likes-list">
                             <li> Coding </li>
                             <li> Reading </li>
@@ -94,8 +94,8 @@
                         </ul>
                     </div>
 
-                    <div class="list-block">
-                        <h3 class="list-title">Dislikes</h3>
+                    <div class="list-block" data-testid="test-dislikes-block">
+                        <h3 class="list-title" data-testid="test-dislikes-title">Dislikes</h3>
                         <ul data-testid="test-user-dislikes" class="item-list dislikes-list">
                             <li>Procrastination</li>
                             <li>Bugs in production</li>
@@ -105,7 +105,7 @@
             </div>
         </article>
 
-        <footer class="attribution">
+        <footer class="attribution" data-testid="test-attribution">
             <small>Profile card — built for Stage 0 task • Pemily Vianne</small>
         </footer>
     </main>
