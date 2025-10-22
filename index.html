@@ -10,9 +10,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/navigation.css">
 </head>
 
 <body>
+    <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="about.html" class="nav-link">About Me</a></li>
+        </ul>
+    </nav>
+
     <main class="page">
         <article data-testid="test-profile-card" class="card" aria-labelledby="name">
             <div class="card-left">
@@ -111,6 +120,8 @@
     </main>
 
     <script src="script.js"></script>
+    <script src="js/global.js" defer></script>
+
 </body>
 
 </html>

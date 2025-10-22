@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Pemily Vianne - Get in touch with a Frontend Web Specialist — Stage 1. Accessible contact form for Pemily Vianne.">
+    <title>Contact — Pemily Vianne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <!-- <h1 class="site-title">Pemily Vianne</h1>
+        <p class="site-tagline">Frontend Web Specialist</p> -->
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+                <li><a href="about.html" class="nav-link">About Me</a></li>
+            </ul>
+        </nav>
+
+        <!-- <div class="theme-toggle" data-testid="test-theme-toggle-container">
+            <label class="toggle" for="themeSwitch" title="Toggle light / dark">
+                <input id="themeSwitch" type="checkbox" aria-label="Toggle theme" data-testid="test-theme-switch"/>
+                <span class="track"><span class="dot" aria-hidden="true"></span></span>
+            </label>
+        </div> -->
+
+        <!-- Theme toggle (global.js will wire behavior) -->
+        <!-- <div class="header-actions">
+            <label class="toggle" for="themeSwitchHeader" title="Toggle theme">
+                <input id="themeSwitchHeader" type="checkbox" aria-label="Toggle theme" />
+                <span class="track"><span class="dot" aria-hidden="true"></span></span>
+            </label>
+        </div> -->
+    </header>
+
+    <main class="page" role="main" id="main" tabindex="-1">
+        <article class="card contact-card">
+            <header class="contact-header">
+                <h1 class="page-title">Get in Touch</h1>
+                <p class="page-subtitle">Have a question or want to work together? I'd love to hear from you!</p>
+            </header>
+
+            <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="fullName" class="form-label">Full Name <span class="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        name="fullName"
+                        data-testid="test-contact-name"
+                        class="form-input"
+                        aria-required="true"
+                        aria-describedby="error-name"
+                        required
+                    />
+                    <span id="error-name" data-testid="test-contact-error-name" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email"
+                        data-testid="test-contact-email"
+                        class="form-input"
+                        aria-required="true"
+                        aria-describedby="error-email"
+                        required
+                    />
+                    <span id="error-email" data-testid="test-contact-error-email" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject <span class="required">*</span></label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject"
+                        data-testid="test-contact-subject"
+                        class="form-input"
+                        aria-required="true"
+                        aria-describedby="error-subject"
+                        required
+                    />
+                    <span id="error-subject" data-testid="test-contact-error-subject" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message <span class="required">*</span></label>
+                    <textarea 
+                        id="message" 
+                        name="message"
+                        data-testid="test-contact-message"
+                        class="form-input form-textarea"
+                        rows="6"
+                        aria-required="true"
+                        aria-describedby="error-message"
+                        required
+                    ></textarea>
+                    <span id="error-message" data-testid="test-contact-error-message" class="error-message" role="alert"></span>
+                </div>
+
+                <button 
+                    type="submit" 
+                    data-testid="test-contact-submit"
+                    class="submit-btn"
+                >
+                    Send Message
+                </button>
+
+                <div 
+                    id="successMessage" 
+                    data-testid="test-contact-success"
+                    class="success-message hidden"
+                    role="alert"
+                    aria-live="polite"
+                >
+                    <svg class="success-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                    <p>Thank you for reaching out! Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+                </div>
+            </form>
+        </article>
+
+        <footer class="attribution" data-testid="test-attribution">
+            <small>Contact page — built for Stage 1 task • Pemily Vianne</small>
+        </footer>
+    </main>
+
+    <!-- <script src="./js/theme.js" defer></script> -->
+    <!-- <script src="/script.js"></script> -->
+    <script src="./js/contact.js"></script>
+</body>
+
+</html>

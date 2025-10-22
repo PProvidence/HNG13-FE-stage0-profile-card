@@ -1,0 +1,52 @@
+/* Navigation Styles - Shared across all pages */
+.main-nav {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background: var(--pink-50);
+    border-color: rgba(231, 84, 128, 0.2);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.nav-link.active {
+    background: linear-gradient(90deg, rgba(231, 84, 128, 0.1), rgba(255, 62, 134, 0.05));
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+@media (max-width: 420px) {
+    .main-nav {
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem;
+        font-size: 13px;
+    }
+}

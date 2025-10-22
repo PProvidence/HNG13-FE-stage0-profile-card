@@ -1,0 +1,254 @@
+/* Navigation Styles (shared) */
+.main-nav {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background: var(--pink-50);
+    border-color: rgba(231, 84, 128, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: linear-gradient(90deg, rgba(231, 84, 128, 0.1), rgba(255, 62, 134, 0.05));
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* About Card */
+.about-card {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(231, 84, 128, 0.1);
+}
+
+.page-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* About Sections */
+.about-section {
+    margin-bottom: 2.5rem;
+}
+
+.about-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    width: 4px;
+    background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    border-radius: 2px;
+}
+
+.section-text {
+    font-size: clamp(0.9375rem, 2vw, 1rem);
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+.section-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Goals List */
+.goals-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.goals-list li {
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--pink-50), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(231, 84, 128, 0.1);
+    transition: all 0.3s ease;
+}
+
+.goals-list li:hover {
+    transform: translateX(5px);
+    border-color: rgba(231, 84, 128, 0.3);
+    box-shadow: 0 4px 12px rgba(231, 84, 128, 0.08);
+}
+
+.list-item-title {
+    font-size: 1rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.list-item-text {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+}
+
+/* Confidence List */
+.confidence-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    padding-left: 0;
+}
+
+.confidence-list li {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.confidence-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.confidence-list strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Note Card */
+.note-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--pink-50), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(231, 84, 128, 0.15);
+    box-shadow: 0 4px 16px rgba(231, 84, 128, 0.06);
+}
+
+.note-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 0.875rem;
+}
+
+.note-text:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.note-signature {
+    font-size: 0.9375rem;
+    color: var(--accent);
+    font-weight: 600;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Dark mode adjustments */
+body.theme-dark .goals-list li {
+    background: linear-gradient(135deg, rgba(255, 62, 134, 0.08), rgba(255, 62, 134, 0.03));
+}
+
+body.theme-dark .note-card {
+    background: linear-gradient(135deg, rgba(255, 62, 134, 0.08), rgba(255, 62, 134, 0.03));
+}
+
+/* Responsive adjustments */
+@media (max-width: 760px) {
+    .about-header {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .about-section {
+        margin-bottom: 2rem;
+    }
+
+    .goals-list {
+        gap: 1rem;
+    }
+
+    .goals-list li {
+        padding: 0.875rem 1rem;
+    }
+
+    .note-card {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .section-title {
+        padding-left: 0.75rem;
+        font-size: 1.125rem;
+    }
+
+    .section-title::before {
+        width: 3px;
+    }
+
+    .goals-list li,
+    .note-card {
+        padding: 1rem;
+    }
+
+    .confidence-list li {
+        padding-left: 1.25rem;
+        font-size: 0.875rem;
+    }
+}

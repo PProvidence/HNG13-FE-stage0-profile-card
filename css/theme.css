@@ -1,0 +1,109 @@
+/* theme.css */
+/* =========================
+   Theme Variables (Light)
+   ========================= */
+:root {
+  --pink-100: #ffe4ee;
+  --pink-200: #f8c2d6;
+  --accent: #e75480;
+  --background: #ffffff;
+  --surface: #f9f9f9;
+  --text-primary: #222;
+  --text-secondary: #555;
+  --shadow: 0 8px 20px rgba(231, 84, 128, 0.06);
+  --border-light: rgba(231, 84, 128, 0.1);
+}
+
+/* =========================
+   Dark Mode
+   ========================= */
+[data-theme="dark"] {
+  --background: #1a1a1a;
+  --surface: #222222;
+  --text-primary: #f7f7f7;
+  --text-secondary: #bbbbbb;
+  --pink-100: #4a2733;
+  --shadow: 0 8px 20px rgba(231, 84, 128, 0.18);
+  --border-light: rgba(231, 84, 128, 0.2);
+}
+
+/* =========================
+   Global Resets & Layout
+   ========================= */
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--background);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(90%, 900px);
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* =========================
+   Card Layout Utility
+   ========================= */
+.card {
+  background: linear-gradient(180deg, var(--surface), rgba(255, 255, 255, 0.01));
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
+  transition: transform 0.36s cubic-bezier(.2, .9, .2, 1), box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(231, 84, 128, 0.2);
+}
+
+/* =========================
+   Theme Toggle Button
+   ========================= */
+.theme-toggle {
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-3px);
+  background: var(--pink-100);
+}
+
+/* =========================
+   Navigation
+   ========================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+nav a {
+  margin: 0 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
